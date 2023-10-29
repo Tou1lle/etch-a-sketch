@@ -23,4 +23,14 @@ grids.forEach(grid => {
     grid.addEventListener("mouseenter", () => {
         grid.style.backgroundColor = "black";
     });
-}); 
+});
+
+//function creates a new grid size
+function changeSize() {
+    let sizeString = prompt("Give a Grid size from 1 to 100");
+    let sizeInt = parseInt(sizeString);
+    gridContainer.innerHTML = "";
+    createGrid(sizeInt);
+}
+
+buttonSize.addEventListener("click", changeSize);
