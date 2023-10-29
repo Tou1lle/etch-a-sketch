@@ -1,0 +1,18 @@
+.main-header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: 600px;
+    width: 600px;
+    margin: auto;
+}
+
+.grid-item {
+    flex: 1 0 calc(100% / 16);
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
