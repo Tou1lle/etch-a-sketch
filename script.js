@@ -18,12 +18,16 @@ function createGrid(gridSize) {
 createGrid(gridSize);
 
 //for each square in grid change color when hovered over
-const grids = document.querySelectorAll(".grid-item");
-grids.forEach(grid => {
-    grid.addEventListener("mouseenter", () => {
-        grid.style.backgroundColor = "black";
+function hooverBlack() {
+    const grids = document.querySelectorAll(".grid-item");
+    grids.forEach(grid => {
+        grid.addEventListener("mouseenter", () => {
+            grid.style.backgroundColor = "black";
+        });
     });
-});
+}
+
+hooverBlack();
 
 //function creates a new grid size
 function changeSize() {
@@ -31,6 +35,7 @@ function changeSize() {
     let sizeInt = parseInt(sizeString);
     gridContainer.innerHTML = "";
     createGrid(sizeInt);
+    hooverBlack();
 }
 
 buttonSize.addEventListener("click", changeSize);
